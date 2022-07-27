@@ -17,6 +17,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
   display: inline-block;
   cursor: pointer;
   transition: .5s all ease-out;
+
+  &:hover {
+    background-color: ${({ variant }) => variant !== 'outline' ? '#fff' : '#4caf50'};
+    color: ${({ variant }) => variant !== 'outline' ? '#4caf50' : '#fff'};
+  }
 `;
 
 /**
