@@ -4,10 +4,12 @@ import StyledButton, { AnimatedLogo, DarkButton, FancyButton, SubmitButton } fro
 import { ThemeProvider } from 'styled-components';
 import { globalTheme } from './global/theme/theme';
 import logo from './logo.svg';
+import GlobalStyle from './global/theme/GlobalStyle';
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
+      <GlobalStyle />
       <div className="App">
         <StyledButton>Styled Button</StyledButton>
         <hr />
