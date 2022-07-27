@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 type StyledButtonProps = {
   variant?: string;
@@ -30,4 +30,29 @@ export const StyledButton = styled.button<StyledButtonProps>`
 export const FancyButton = styled(StyledButton)`
   background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
   border: none;
+`;
+
+export const SubmitButton = styled(StyledButton).attrs({
+  type: 'submit',
+})`
+  box-shadow: 0 9px #999;
+
+  &:active {
+    background-color: ${({ variant }) => variant !== 'outline' ? '#fff' : '#4caf50'};
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const AnimatedLogo = styled.img`
+  animation: ${rotate} infinite 20s linear;
 `;

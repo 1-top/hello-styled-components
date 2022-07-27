@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import styled from 'styled-components';
-import StyledButton, { FancyButton } from './components/button/Button';
+import StyledButton, { AnimatedLogo, FancyButton, SubmitButton } from './components/button/Button';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -9,8 +9,12 @@ function App() {
       <StyledButton>Styled Button</StyledButton>
       <hr />
       <StyledButton variant="outline">Outline Button</StyledButton>
-      <hr/>
+      <hr />
       <FancyButton>Fancy Button</FancyButton>
+      <hr />
+      <SubmitButton>Submit Button</SubmitButton>
+      <hr />
+      <AnimatedLogo src={logo} />
     </div>
   );
 }
