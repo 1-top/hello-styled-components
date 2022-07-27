@@ -1,21 +1,27 @@
 import React from 'react';
 import './App.css';
-import StyledButton, { AnimatedLogo, FancyButton, SubmitButton } from './components/button/Button';
+import StyledButton, { AnimatedLogo, DarkButton, FancyButton, SubmitButton } from './components/button/Button';
+import { ThemeProvider } from 'styled-components';
+import { globalTheme } from './global/theme/theme';
 import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <StyledButton>Styled Button</StyledButton>
-      <hr />
-      <StyledButton variant="outline">Outline Button</StyledButton>
-      <hr />
-      <FancyButton>Fancy Button</FancyButton>
-      <hr />
-      <SubmitButton>Submit Button</SubmitButton>
-      <hr />
-      <AnimatedLogo src={logo} />
-    </div>
+    <ThemeProvider theme={globalTheme}>
+      <div className="App">
+        <StyledButton>Styled Button</StyledButton>
+        <hr />
+        <StyledButton variant="outline">Outline Button</StyledButton>
+        <hr />
+        <FancyButton>Fancy Button</FancyButton>
+        <hr />
+        <SubmitButton>Submit Button</SubmitButton>
+        <hr />
+        <AnimatedLogo src={logo} width="100px" />
+        <hr />
+        <DarkButton>DarkButton</DarkButton>
+      </div>
+    </ThemeProvider>
   );
 }
 

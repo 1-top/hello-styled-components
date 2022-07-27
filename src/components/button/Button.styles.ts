@@ -56,3 +56,8 @@ const rotate = keyframes`
 export const AnimatedLogo = styled.img`
   animation: ${rotate} infinite 20s linear;
 `;
+
+export const DarkButton = styled(StyledButton)`
+  border: 2px solid ${(props) => props.theme.dark.primary};
+  background-color: ${(props) => props.theme.dark.primary};
+`
